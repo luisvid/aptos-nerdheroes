@@ -38,6 +38,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
+        env:
+            PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
+            VITE_APP_NETWORK: ${{ secrets.VITE_APP_NETWORK }}
+            VITE_MODULE_PUBLISHER_ACCOUNT_ADDRESS: ${{ secrets.VITE_MODULE_PUBLISHER_ACCOUNT_ADDRESS }}
+            VITE_MODULE_PUBLISHER_ACCOUNT_PRIVATE_KEY: ${{ secrets.VITE_MODULE_PUBLISHER_ACCOUNT_PRIVATE_KEY }}
+            VITE_COLLECTION_CREATOR_ADDRESS: ${{ secrets.VITE_COLLECTION_CREATOR_ADDRESS }}
+            VITE_COLLECTION_ADDRESS: ${{ secrets.VITE_COLLECTION_ADDRESS }}
+            VITE_MODULE_ADDRESS: ${{ secrets.VITE_MODULE_ADDRESS }}
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4
