@@ -1,0 +1,12 @@
+{
+  "description": "Nerd Hero with Phone",
+  "image": "",
+  "name": "Nerd Hero 1",
+  "external_url": "https://your_project_url.io/1",
+  "attributes": [
+    {
+      "trait_type": "nerd_level",
+      "value": "1"
+    }
+  ]
+}
